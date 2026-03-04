@@ -5,8 +5,8 @@ function Header(){
                 <h1>Movies Challenge <span></span></h1>
             </div>
             <div className="search">
-                <label>Search : </label>
-                <input placeholder="Type here your search" className="input"></input>
+                <label htmlFor="search">Search : </label>
+                <input id="search" placeholder="Type here your search" className="input"></input>
             </div>
         </header>
     )

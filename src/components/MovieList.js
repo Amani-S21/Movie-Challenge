@@ -1,4 +1,16 @@
+import { useEffect } from "react";
+
+const KEY = "26867abd"
 function MovieList (){
+
+    useEffect(function(){
+        async function fetchData(){
+            const res = await fetch("http://www.omdbapi.com/?apikey=26867abd&t=Inception")
+            const data = await res.json()
+            console.log(data)
+        }
+        fetchData()
+    }, [])
     return(
         <ul className="list-movies">
             <li style={{display : "flex", gap : "20px", width : "100%", borderBottom : "2px solid #ffff", padding : "10px"}}>
